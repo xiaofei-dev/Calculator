@@ -142,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
         boolean temp;
 
         if( item.isCheckable() ){
-            final SharedPreferences.Editor editor = getSharedPreferences("item", MODE_PRIVATE).edit();    //存储数据
+            final SharedPreferences.Editor editor =
+                    getSharedPreferences("item", MODE_PRIVATE).edit();    //存储数据
 
             if( !item.isChecked() ){
                 item.setChecked(true);
@@ -322,6 +323,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    //设置主题
     public static void setTheme(Context context) {
         SharedPreferences preferences = context.getSharedPreferences("item", MODE_PRIVATE);
         int themeId = preferences.getInt("theme", 0);
